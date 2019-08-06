@@ -4,26 +4,9 @@ import { update, clear } from "./actions";
 import "./App.css";
 
 //hello
+//sup
 
-const buttonList = [
-  "AC",
-  "/",
-  "x",
-  7,
-  8,
-  9,
-  "-",
-  4,
-  5,
-  6,
-  "+",
-  1,
-  2,
-  3,
-  "=",
-  0,
-  "."
-];
+const buttonList = ["AC", "/", "x", 7, 8, 9, "-", 4, 5, 6, "+", 1, 2, 3, "=", 0, "."];
 
 class Calculator extends React.Component {
   update = () => {
@@ -47,10 +30,10 @@ class Calculator extends React.Component {
     };
 
     return (
-      <div className="App">
-        <div className="container">
-          <h3 className="formula">{this.props.formula}</h3>
-          <h3 className="output">{this.props.output}</h3>
+      <div className='App'>
+        <div className='container'>
+          <h3 className='formula'>{this.props.formula}</h3>
+          <h3 className='output'>{this.props.output}</h3>
           {buttonList.map(button => {
             if (button === "AC") {
               return (
@@ -60,48 +43,19 @@ class Calculator extends React.Component {
               );
             } else if (button === 0) {
               return (
-                <button
-                  style={wideStyle}
-                  value={button}
-                  onClick={() =>
-                    this.props.update(
-                      button,
-                      this.props.formula,
-                      this.props.output
-                    )
-                  }
-                >
+                <button style={wideStyle} value={button} onClick={() => this.props.update(button, this.props.formula, this.props.output)}>
                   {button}
                 </button>
               );
             } else if (button === "=") {
               return (
-                <button
-                  style={tallStyle}
-                  value={button}
-                  onClick={() =>
-                    this.props.update(
-                      button,
-                      this.props.formula,
-                      this.props.output
-                    )
-                  }
-                >
+                <button style={tallStyle} value={button} onClick={() => this.props.update(button, this.props.formula, this.props.output)}>
                   {button}
                 </button>
               );
             } else {
               return (
-                <button
-                  value={button}
-                  onClick={() =>
-                    this.props.update(
-                      button,
-                      this.props.formula,
-                      this.props.output
-                    )
-                  }
-                >
+                <button value={button} onClick={() => this.props.update(button, this.props.formula, this.props.output)}>
                   {button}
                 </button>
               );
