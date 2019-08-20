@@ -21,10 +21,6 @@ export const update = (buttonValue, currentFormula, currentOutput) => {
     }
   };
 
-  // 1) number => number
-  // 2) operator => number
-  // 3) number => operator
-  // 4) "="
   const calculate = currentFormula => {
     let formulaCleaned = currentFormula.join("").split(/(\+|-|x|\/)/g);
 
@@ -84,62 +80,6 @@ export const update = (buttonValue, currentFormula, currentOutput) => {
     updateOutput = [...currentOutput, buttonValue];
   }
 
-  // if (buttonValue === "=") {
-  //   let formulaCleaned = currentFormula.join("").split(/(\+|-|x|\/)/g);
-
-  //   let calculation = 0;
-  //   let operator = "+";
-
-  //   for (let i = 0; i < formulaCleaned.length; i++) {
-  //     let item = formulaCleaned[i];
-  //     let isOperator = /(\+|-|x|\/)/.test(item);
-
-  //     if (isOperator) {
-  //       operator = item;
-  //     } else {
-  //       calculation = operatorFunctions[operator](calculation, Number(item));
-  //     }
-  //   }
-
-  //   if (!isNaN(calculation)) {
-  //     updateFormula = [...currentFormula, buttonValue, calculation];
-  //     updateOutput = [calculation];
-  //     console.log(typeof currentFormula[currentFormula.length - 1] === "number");
-  //   }
-  // } else if (buttonValue === ".") {
-  //   if (!currentOutput.includes(".")) {
-  //     updateFormula = [...currentFormula, buttonValue];
-  //     updateOutput = [...currentOutput, buttonValue];
-  //   }
-  // } else if (
-  //   //CURRENT BUG
-  //   typeof currentFormula[currentFormula.length - 1] === "number" ||
-  //   currentFormula[currentFormula.length - 1] === "."
-  // ) {
-  //   if (currentFormula[currentFormula.length - 1] === 0) {
-  //     updateFormula = [buttonValue];
-  //     updateOutput = [buttonValue];
-  //   } else if (digits.includes(buttonValue)) {
-  //     updateFormula = [...currentFormula, buttonValue];
-  //     updateOutput = [...currentOutput, buttonValue];
-  //   } else if (operators.includes(buttonValue)) {
-  //     updateFormula = [...currentFormula, buttonValue];
-  //     updateOutput = [buttonValue];
-  //   }
-  // } else if (operators.includes(currentFormula[currentFormula.length - 1])) {
-  //   if (digits.includes(buttonValue)) {
-  //     updateFormula = [...currentFormula, buttonValue];
-  //     updateOutput = [buttonValue];
-  //   } else if (currentFormula.includes('=')) {
-  //     updateFormula = [...currentFormula, buttonValue];
-  //     updateOutput = [buttonValue];
-  //   }
-  //   else if (operators.includes(buttonValue)) {
-  //     currentFormula[currentFormula.length - 1] = buttonValue;
-  //     updateOutput = [buttonValue];
-  //   }
-  // }
-  // console.log(currentFormula);
   return {
     type: UPDATE,
     formula: updateFormula,

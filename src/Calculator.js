@@ -7,6 +7,7 @@ import "./App.css";
 //sup
 //jane
 //++++
+//jason was here
 
 const buttonList = ["AC", "/", "x", 7, 8, 9, "-", 4, 5, 6, "+", 1, 2, 3, "=", 0, "."];
 //**** */
@@ -26,7 +27,7 @@ class Calculator extends React.Component {
     };
 
     const tallStyle = {
-      position: "absolute",
+      position: "fixed",
       height: "100px",
       width: "50px"
     };
