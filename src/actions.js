@@ -2,6 +2,7 @@ export const UPDATE = "UPDATE";
 export const CLEAR = "CLEAR";
 
 export const update = (buttonValue, currentFormula, currentOutput) => {
+  console.log(buttonValue, currentFormula, currentOutput);
   let updateFormula = currentFormula;
   let updateOutput = currentOutput;
   let operators = ["/", "x", "+", "-"];

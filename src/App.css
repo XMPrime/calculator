@@ -1,8 +1,8 @@
+@import "../node_modules/bulma/css/bulma.css";
+
 .App {
-  text-align: center;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 250px;
 }
 
 .App-logo {
@@ -35,7 +35,11 @@
   }
 }
 
-button {
+.button.bottomRow {
+  bottom: 50px;
+  right: 25px;
+}
+.button {
   position: relative;
   height: 50px;
   width: 50px;
@@ -44,13 +48,32 @@ button {
 .container {
   border: 2px solid black;
   padding: 5px;
+  width: 250px;
+  height: 350px;
+  background-color: #5995da;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.display {
+  border: 1px solid black;
+  padding-left: 10px;
+  padding-right: 10px;
   width: 200px;
+  display: inline-block;
+  background-color: whitesmoke;
 }
 
 .formula {
   text-align: right;
+  font-weight: bold;
 }
 
 .output {
   text-align: right;
+  font-weight: bold;
+}
+
+.spacing {
+  height: 10px;
 }
