@@ -35,6 +35,12 @@
   }
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .button.bottomRow {
   bottom: 50px;
   right: 25px;
@@ -51,7 +57,6 @@
   width: 250px;
   height: 350px;
   background-color: #5995da;
-  box-sizing: border-box;
   text-align: center;
 }
 

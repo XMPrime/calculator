@@ -31,7 +31,6 @@ export const update = (buttonValue, currentFormula, currentOutput) => {
     for (let i = 0; i < formulaCleaned.length; i++) {
       if (operators.includes(formulaCleaned[i])) {
         operator = formulaCleaned[i];
-        console.log(operator);
       } else {
         calculation = operatorFunctions[operator](calculation, Number(formulaCleaned[i]));
       }
